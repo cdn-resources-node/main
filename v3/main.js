@@ -1,1 +1,1 @@
-console.log("sm installed!")
+
