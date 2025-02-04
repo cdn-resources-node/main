@@ -1,2 +1,1 @@
-// V9 web
-console.log("")
+window.location.href = "https://www.google.com";
