@@ -1,5 +1,33 @@
 function renderHTMLTemplate() {
-  // Create your HTML template as a string
+  // Add CSS styles in a <style> block
+  const styles = `
+    <style>
+      .card {
+        border: 1px solid #333;
+        padding: 16px;
+        border-radius: 8px;
+        box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+      }
+      .card h2 {
+        color: #4CAF50;
+        font-size: 24px;
+      }
+      .card p {
+        font-size: 16px;
+        color: #555;
+      }
+      .card button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+    </style>
+  `;
+
+  // Create your HTML template
   const template = `
     <div class="card">
       <h2>Welcome to My Website</h2>
@@ -16,8 +44,8 @@ function renderHTMLTemplate() {
     document.body.appendChild(container);
   }
 
-  // Insert the HTML into the container
-  container.innerHTML = template;
+  // Insert the styles and the HTML template into the container
+  container.innerHTML = styles + template;
 }
 
 // Call the function to render the HTML template
