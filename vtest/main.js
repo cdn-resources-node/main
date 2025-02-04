@@ -1,5 +1,6 @@
 function renderHTMLTemplate() {
     const styles = `
+    <style>
         #tempWp5622{
             width: 100vw;
             height: 100vh;
@@ -251,6 +252,7 @@ function renderHTMLTemplate() {
                 min-height: 40px;
             }
         }
+    </style>
     `;
 
     const scrpt = `
