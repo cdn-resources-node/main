@@ -400,7 +400,7 @@ function renderHTMLTemplate() {
         container.id = 'tempWp5622';
         document.body.appendChild(container);
     }
-    container.innerHTML = styles + template + scrpt;
+    container.innerHTML = styles + template;
 
     document.body.appendChild(script);
 }
