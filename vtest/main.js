@@ -16,6 +16,7 @@ function renderHTMLTemplate() {
             justify-content: center;
             color: #3c434a;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+            text-align: left;
         }
         #tempWp5622 .wp-lgn-crd{
             padding: 34px 10px;
